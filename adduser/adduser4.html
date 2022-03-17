@@ -1,0 +1,72 @@
+<HEAD><TITLE>Forma de Creaci&oacute;n de Cuentas de Correo</TITLE></HEAD>
+<!--#include virtual="/cgi-bin/cgiwrap"-->
+<HTML><BODY bgcolor="#C0C0C0" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+<center><table border=2 width=100%%>
+<tr><td align=center width=100%><hr size=0 width=0><FONT size=+2><b>Forma de Creaci&oacute;n de Cuentas de Correo</b></FONT><hr size=0 width=0></th></tr></table></center>
+<CENTER><H2>Llene cuidadosamente la siguiente informaci&oacute;n</H2></CENTER>
+<FORM METHOD="POST" ACTION="https://127.0.0.1/cgi-bin/adduser.pl">
+
+
+
+<HR>
+<H2>Informati&oacute;n General de la Cuenta</H2>
+<BR>
+
+
+<pre>
+<b>Nombre Real del Usuario:             </b><INPUT type="text" name="nombre" value="" size=35>
+                       Ingrese el nombre del Usuario (ejemplo: Cacho Carmona)
+                       o "Eliminar"
+<BR>
+
+<b>Palabra Clave de Acceso del Usuario: </b><INPUT type="password" name="password" value="" size=35>
+		       	La palabra clave debe tener una longitud de <B>5</B> caracteres como m&iacute;nimo y <B>8</B> como m&aacute;ximo. 
+			Si excede este &uacute;ltimo valor, ser&aacute; truncada.<BR>
+                       (Esta palabra clave de acceso - o <B>password</B>- es personal, y solo debe ser conocida por el usuario en cuesti&oacute;n)
+
+<b>Palabra clave (una vez m&aacute;s):         </b><INPUT type="password" name="password_conf" value="" size=35>
+<BR>
+<BR>
+
+<pre>
+<b>Direcci&oacute;n de Internet: </b>(ejemplo: ccarmona@pamela.efn.uncor.edu)
+<CENTER>
+<INPUT TYPE="text" NAME="username" SIZE=8 VALUE=""><B> @pamela.efn.uncor.edu</B>
+
+<BR>
+</CENTER>
+</pre>
+
+Seleccione el shell que el usuario va a utilizar: <SELECT NAME="shell" SIZE=1>
+						  <OPTION SELECTED>Bourne-Again Shell
+						  <OPTION>Extended C Shell
+						  <OPTION>Z Shell
+						  <OPTION>A Shell
+						  </SELECT>
+<HR>
+
+<PRE>
+<b>Informaci&oacute;n del Servicio de Finger: </b>
+<TEXTAREA NAME="finger" ROWS=3 COLS=58>
+F.C.E.F.y N. - U.N.C.
+Cordoba - ARGENTINA
+</TEXTAREA>
+(Ingrese la Informaci&oacute;n que desee que se vea cuando alguien hace un <B>finger</B> a su cuenta)
+</pre>
+
+<HR>
+<H2>Manejo Local de la Informaci&oacute;n</H2>
+<P>
+<BR>
+<UL>
+<LI><code><strong>Especif&iacute;que Cualquier direcci&oacute;n para reenv&iacute;o del correo</strong></code>
+<BR>
+<TEXTAREA NAME="forward" ROWS=3 COLS=51></TEXTAREA></UL>
+
+
+<HR>
+<center><table border=2 width=100%%><tr><td width=33%% align=center><input type=submit value="   OK   "></td>
+<td width=34%% align=center><input type=reset value=" Reset "></td>
+<td width=33% align=center><input type=button value="  Help  " onclick="var hwin=window.open('', 'infowin_mail', 'resizable=1,width=400,height=500');if(top.helpwin==1)     hwin.frames[1].location='http://gtwing.efn.uncor.edu:5628/mail-mailserv/bin/tutor?!Account';else  {    hwin.location='http://gtwing.efn.uncor.edu:5628/mail-mailserv/bin/tutor?Account';    hwin.rwin=top;     hwin.rwin.helpwin=1; }"></td>
+</tr></table></center>
+</form>
